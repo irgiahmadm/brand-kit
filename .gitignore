@@ -1,0 +1,13 @@
+# Never publish local agent settings/state
+.claude/
+
+# Python
+__pycache__/
+*.pyc
+
+# Generated output / test runs
+*-workspace/
+brand-book.html
+tokens/
+renders/
+shots/

@@ -1,0 +1,45 @@
+name: Feature request
+description: A new output, stage, stack or improvement to the workflow
+title: "feat: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What are you trying to do, and what gets in the way today?
+      placeholder: My team ships with Flutter and the brand book doesn't show how components look on a phone.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What should the skill do or produce? Mock-ups and examples from other tools help.
+    validations:
+      required: true
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Stage
+      multiple: true
+      options:
+        - 0 Discovery
+        - 1 Explore
+        - 2 Finalize
+        - 3 Extend
+        - 4 Brand book
+        - 5 Implement
+        - Install / agent support
+        - Docs
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you considered
+  - type: checkboxes
+    id: fit
+    attributes:
+      label: Fit with the skill
+      options:
+        - label: The user still makes every choice (no "recommended" option chosen for them)
+        - label: It doesn't make the agent read large generated files or many extra images

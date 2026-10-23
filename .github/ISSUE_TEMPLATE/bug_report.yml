@@ -1,0 +1,64 @@
+name: Bug report
+description: Something in the skill or its scripts didn't work as described
+title: "fix: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Please don't paste confidential brand material; a small excerpt or a redacted `brand.json` is enough.
+  - type: dropdown
+    id: agent
+    attributes:
+      label: Agent
+      options:
+        - Claude Code
+        - Codex
+        - Cursor
+        - Gemini CLI
+        - GitHub Copilot
+        - OpenCode
+        - Other (say which below)
+    validations:
+      required: true
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Stage
+      options:
+        - 0 Discovery
+        - 1 Explore (review boards)
+        - 2 Finalize (logo kit, web / mobile icons)
+        - 3 Extend (mascot, loaders, gimmicks)
+        - 4 Brand book
+        - 5 Implement (tokens, components)
+        - Install / the skill didn't load
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: command
+    attributes:
+      label: Script or prompt
+      description: The script and arguments that failed, or the prompt you gave the agent.
+      placeholder: python scripts/make_kit.py brand/logo/kit.json
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what you expected
+      description: Include the exact error text if there is one.
+    validations:
+      required: true
+  - type: textarea
+    id: shots
+    attributes:
+      label: Screenshots
+      description: For anything visual (review board, brand book, icons), a screenshot says more than a description.
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      description: OS, Python version, browser used for rendering, brand-kit version or commit.
+      placeholder: Windows 11, Python 3.12, Chrome 141, v1.0.0
+    validations:
+      required: true

@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: How to install and use brand-kit
+    url: https://github.com/irgiahmadm/brand-kit#install
+    about: Install with `npx skills add irgiahmadm/brand-kit -a <agent>`, then start a new agent session.
